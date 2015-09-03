@@ -1,7 +1,7 @@
 ## WSAPP
 
 ![yourls](https://assets-cdn.github.com/images/icons/emoji/unicode/1f4a9.png)
-[YOURLS](http://github.com) — [![Build Status](https://github.com)](https://github.com)
+
 
 ## Laravel PHP Framework
 
