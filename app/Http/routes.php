@@ -14,7 +14,7 @@
 Route::get('/', 'Pages\PagesController@home');
 
 Route::resource('reports', 'ReportsController');
-Route::get('reports/analyze', 'ReportsController@analyze');
+Route::get('scan', 'ReportsController@scan');
 
 
 

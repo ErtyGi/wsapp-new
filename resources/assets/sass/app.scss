@@ -1,5 +1,24 @@
  @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+ @import "partials/color";
 
 body{
  padding-top: 70px;
 }
+
+ .page-heading
+ {
+  margin-top: 1em ;
+  margin-bottom: 0;
+  padding-bottom: 1em;
+  text-align: center;
+  line-height: 1;
+ }
+ .section-heading-divider
+ {
+   content: '';
+   display: block;
+   width: 70px;
+   height: 3px;
+   background: $primaryColor;
+   margin: 0 auto 40;
+ }

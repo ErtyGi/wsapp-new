@@ -6,18 +6,29 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ScanReportsRequest;
 
 class ReportsController extends Controller
 {
+    /**
+     * Create a new Report Controller instance
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
 
     /**
      * Display a listing of the resource.
      *
      * @return Response
      */
-    public function analyze(Request $request)
+    public function scan(ScanReportsRequest $request)
     {
-        return $request->all();
+        $request = $request->all();
+
+        return view('reports.analyze', compact('request'));
     }
 
 
@@ -28,7 +39,7 @@ class ReportsController extends Controller
      */
     public function index()
     {
-        //
+        return view('reports.analyze');
     }
 
     /**
@@ -38,7 +49,7 @@ class ReportsController extends Controller
      */
     public function create()
     {
-        //
+        return view('reports.analyze');
     }
 
     /**

@@ -24,6 +24,14 @@ class AuthController extends Controller
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
     /**
+     * Customize the post-authentication redirect location by defining a redirectPath property on the AuthController
+     * @var string
+     */
+
+    protected $redirectPath = '/';
+    protected $loginPath = '/login';
+
+    /**
      * Create a new authentication controller instance.
      *
      * @return void

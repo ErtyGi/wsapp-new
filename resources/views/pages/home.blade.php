@@ -10,17 +10,20 @@
    <div class="row">
     <div class="col-md-6 col-md-offset-3">
      @include('errors.list')
-     <form action="reports/analyze" method="post">
+
+         {!!  Form::open(['method'=>'GET','action'=> 'ReportsController@scan']) !!}
        <div class="input-group input-group-lg">
-        <input type="text" class="form-control" placeholder="http://">
-        <span class="input-group-btn">
-         <input type="submit" value="{{trans('pages/general.button-analyzer')}}"  class="btn btn-success" >
-        </span>
+
+           {!! Form::text('scan_url', null, ['class'=>'form-control', 'placeholder'=>'http://']) !!}
+            <span class="input-group-btn">
+                {!! Form::submit(trans('pages/general.button-analyzer'), ['class' => 'btn btn-success']) !!}
+            </span>
        </div><!-- /input-group -->
-     </form>
+         {!! Form::close() !!}
     </div><!-- /.col-lg-6 -->
 
    </div><!-- /.row -->
 
   </div>
 @stop
+
